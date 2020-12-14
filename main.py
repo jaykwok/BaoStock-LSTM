@@ -3,8 +3,6 @@ import pandas as pd
 from pandas import DataFrame,Series
 import matplotlib.pyplot as plt
 import numpy as np
-import torch as t
-from torch.nn.utils.rnn import pack_padded_sequence, pad_packed_sequence
 
 #登录系统
 try:
@@ -47,9 +45,15 @@ while(i<len(stock_code)):
 # 绘图
 plt.figure(1)
 plt.plot(mid[0])
+plt.title(stock_code[0])
 plt.figure(2)
 plt.plot(mid[1])
+plt.title(stock_code[1])
 plt.show()
+
+#lstm测试效果
+
+
 
 #登出系统
 try:
